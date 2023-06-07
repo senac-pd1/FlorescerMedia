@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Links</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Links</h1>
+
+    <ul id="linkList">
+    </ul>
+
+    <script>
+        var fileNames = ['alocasia.png', 
+                         'amorperfeito.png', 
+                         'anturio.png',
+                         'borboleta.png',
+                         'bromelia.jpg',
+                         'cacto.png',
+                         'coleus.png',
+                         'dracena.png',
+                         'espadasaojorge.png',
+                         'filodrendo.png',
+                         'girassol.jpg',
+                         'hibisco.png',
+                         'hortencia.png',
+                         'lirio.png',
+                         'maranta.png',
+                         'matantapeluda.png',
+                         'palmeiraondulada.png',
+                         'peperomia.png',
+                         'samambaia.png',
+                         'trombeta.png'];
+
+        var linkList = document.getElementById("linkList");
+
+        for (var i = 0; i < fileNames.length; i++) {
+            var listItem = document.createElement("li");
+            var link = document.createElement("a");
+            link.href = "imagens/"+fileNames[i];
+            link.textContent = fileNames[i];
+            listItem.appendChild(link);
+            linkList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
